@@ -8,12 +8,13 @@ public class Room : ScriptableObject
 {
     public string name;
     public string[] text;
-    public Room[] room;
+    /// <summary>“Œ¼“ì–k‚Ì‡‚Å“ü‚ê‚é</summary>
+    public Room[] rooms;
 
     public Room(Room room)
     {
         this.name = room.name;
         this.text = room.text;
-        this.room = room.room;
+        this.rooms = room.rooms;
     }
 }
