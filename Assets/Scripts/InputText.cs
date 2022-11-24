@@ -1,19 +1,59 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+using UnityEngine.LowLevel;
 
 public class InputText : MonoBehaviour
 {
+    [SerializeField]
+    private TMP_InputField _inputField;
+
+    [SerializeField]
+    private Player _player;
+
     //åàÇﬂÇÁÇÍÇΩï∂éöÇÃÇ«ÇÍÇ©Çì¸óÕÇ≥ÇπÇ±Ç±Ç≈îªíËÇ∑ÇÈ
     //à·Ç§èÍçáÇÕÇ‡Ç§àÍìxëIëï∂ÇèoóÕÇµÇΩÇ¢
-    void Start()
+    public void TextInput() 
     {
-        
+        if (_inputField.text != "") 
+        {
+            switch(_inputField.text)
+            {
+                case "ìå":
+                    if (_player.PlayerRoom.rooms[0] != null)
+                    {
+                        _player.PlayerRoom = _player.PlayerRoom.rooms[0];
+                    }
+                    break;
+
+                case "êº":
+                    if (_player.PlayerRoom.rooms[1] != null)
+                    {
+                        _player.PlayerRoom = _player.PlayerRoom.rooms[1];
+                    }
+                    break;
+
+                case "ìÏ":
+                    if (_player.PlayerRoom.rooms[2] != null)
+                    {
+                        _player.PlayerRoom = _player.PlayerRoom.rooms[2];
+                    }
+                    break;
+
+                case "ñk":
+                    if (_player.PlayerRoom.rooms[3] != null) 
+                    {
+                        _player.PlayerRoom = _player.PlayerRoom.rooms[3];
+                    }
+                    break;
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Select() 
     {
-        
+        _inputField.Select();
     }
 }
