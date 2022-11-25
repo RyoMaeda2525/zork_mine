@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 973c1d4071750fe4b98479a4ffcb7845, type: 3}
-  m_Name: StartRoomwall
+  m_Name: WaterTankRoomSouth
   m_EditorClassIdentifier: 
   name: StartRoomwall
-  text:
-  - "\u58C1\u4EE5\u5916\u4F55\u3082\u306A\u3044\u3088\u3046\u3060"
+  texts: []
   rooms:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: eaf2c5adecc64dc4fbe734446599d546, type: 2}
+  - {fileID: 11400000, guid: f5f8377552e5d7a4ab4db6f849bd8569, type: 2}
+  roomItemList: []

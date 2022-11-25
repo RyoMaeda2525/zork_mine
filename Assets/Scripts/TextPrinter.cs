@@ -10,7 +10,6 @@ public class TextPrinter : MonoBehaviour
     [SerializeField]
     private TMP_Text _textUi = default;
 
-    [SerializeField]
     private string[] _messages;
 
     [SerializeField]
@@ -18,6 +17,8 @@ public class TextPrinter : MonoBehaviour
 
     public string[] MessageSet
     {
+        get { return _messages; }
+
         set
         {
             _messages = value;
