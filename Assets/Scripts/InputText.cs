@@ -31,6 +31,8 @@ public class InputText : MonoBehaviour
     {
         if (_inputField.text != "")
         {
+            _tp.InputTextPrint(_inputField.text);
+
             switch (_inputField.text)
             {
                 case "東":
@@ -38,45 +40,54 @@ public class InputText : MonoBehaviour
                     {
                         RoomSet(_player.PlayerRoom.rooms[0]);
                     }
-                    return;
+                    break;
 
                 case "西":
                     if (_player.PlayerRoom.rooms[1] != null)
                     {
                         RoomSet(_player.PlayerRoom.rooms[1]);
                     }
-                    return;
+                    break;
 
                 case "南":
                     if (_player.PlayerRoom.rooms[2] != null)
                     {
                         RoomSet(_player.PlayerRoom.rooms[2]);
                     }
-                    return;
+                    break;
 
                 case "北":
                     if (_player.PlayerRoom.rooms[3] != null)
                     {
                         RoomSet(_player.PlayerRoom.rooms[3]);
                     }
-                    return;
+                    break;
+
+                case "位置":
+
 
                 default:
                     //ものを取ると書いた時の処理
                     if (_get.IsMatch(_inputField.text))
                     {
-
                         for (int i = 0; i < _player.PlayerRoom.roomItemList.Count; i++)
                         {
                             Regex regex = new Regex(_player.PlayerRoom.roomItemList[i].itemName);
 
                             if (regex.IsMatch(_inputField.text))
                             {
-                                Debug.Log($"{regex}を取得した");
-                                return;
+                                for (int j = 0; j < _tp.MessageTextSet.Length; j++)
+                                {
+                                    if (regex.IsMatch(_tp.MessageTextSet[j]))
+                                    {
+
+                                        Debug.Log($"{regex}を取得した");
+                                        _inputField.text = "";
+                                        return;
+                                    }
+                                }
                             }
                         }
-
                         Debug.Log("取るものがありませんでした");
                     }
                     //ものを見ると書いた時の処理
@@ -88,8 +99,15 @@ public class InputText : MonoBehaviour
 
                             if (regex.IsMatch(_inputField.text))
                             {
-                                Debug.Log($"{regex}を見た");
-                                return;
+                                for (int j = 0; j < _tp.MessageTextSet.Length; j++)
+                                {
+                                    if (regex.IsMatch(_tp.MessageTextSet[j]))
+                                    {
+                                        _tp.MessageTextSet = _player.PlayerRoom.roomItemList[i].informationText;
+                                        _inputField.text = "";
+                                        return;
+                                    }
+                                }
                             }
                         }
 
@@ -104,8 +122,24 @@ public class InputText : MonoBehaviour
 
                             if (regex.IsMatch(_inputField.text))
                             {
-                                Debug.Log($"{regex}を開けた");
-                                return;
+                                for (int j = 0; j < _tp.MessageTextSet.Length; j++)
+                                {
+                                    if (regex.IsMatch(_tp.MessageTextSet[0]) || regex.IsMatch(_player.PlayerRoom.texts[j]))
+                                    {
+                                        Regex regexDoor = new Regex("扉");
+
+                                        if (regexDoor.IsMatch(_player.PlayerRoom.roomItemList[i].itemName))
+                                        {
+                                            Debug.Log($"{_player.PlayerRoom.roomItemList[i].itemName}を開けた"); 
+                                        }
+                                        else 
+                                        {
+                                            Debug.Log($"{regex}を開けた");
+                                        }
+                                        _inputField.text = "";
+                                        return;
+                                    }
+                                }
                             }
                         }
 
@@ -118,6 +152,7 @@ public class InputText : MonoBehaviour
                     }
                     break;
             }
+            _inputField.text = "";
         }
     }
 

@@ -4,6 +4,7 @@ using TMPro;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.InputSystem.InputRemoting;
 
 public class TextPrinter : MonoBehaviour
 {
@@ -15,16 +16,23 @@ public class TextPrinter : MonoBehaviour
     [SerializeField]
     ScrollRect _sr;
 
-    public string[] MessageSet
+    public string[] MessageTextSet
     {
         get { return _messages; }
 
         set
         {
             _messages = value;
-            _textUi.text += '\n';
             Print();
         }
+    }
+
+    public void InputTextPrint(string inputText) 
+    {
+        _textUi.text += '\n';
+        _textUi.text += ">" + inputText;
+        _textUi.text += '\n';
+        StartCoroutine(ForceScrollDown());
     }
 
     public void Print()

@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 973c1d4071750fe4b98479a4ffcb7845, type: 3}
-  m_Name: WaterTankRoom
+  m_Name: WaterTankRoomWest
   m_EditorClassIdentifier: 
-  name: "\u6C34\u69FD\u306E\u3042\u308B\u90E8\u5C4B"
+  name: "\u7DD1\u306E\u6249\u306E\u524D"
   texts:
-  - "\u76EE\u306E\u524D\u306B\u306F2m\u8FD1\u304F\u306E\u5927\u304D\u306A\u6C34\u69FD\u304C\u3042\u308A"
-  - "\u5468\u308A\u306E\u58C1\u306B\u306F\u8D64\u3001\u9752\u3001\u7DD1\u306E\u6249\u304C\u3042\u308B\u3002"
+  - "\u7DD1\u306E\u6249\u306E\u524D\u307E\u3067\u6765\u307E\u3057\u305F"
   rooms:
+  - {fileID: 11400000, guid: f5f8377552e5d7a4ab4db6f849bd8569, type: 2}
   - {fileID: 0}
-  - {fileID: 11400000, guid: db8b53fe05a75b34aa6918e097224cf5, type: 2}
-  - {fileID: 11400000, guid: 95d2c0a396bd1ad449f86a5111d75c9c, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   roomItemList:
-  - itemName: aaa
+  - itemName: "\u7DD1\u306E\u6249"
     collectItem: 0
-    informationText: []
+    informationText:
+    - "\u6728\u3067\u3067\u304D\u3066\u3044\u308B\u666E\u901A\u306E\u6249\u306E\u3088\u3046\u3060"
     openText: []
     getText: []
     notFaundText: []

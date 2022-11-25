@@ -15,7 +15,10 @@ public class Player : MonoBehaviour
         get { return _playerRoom; }
 
         set 
-        { 
+        {
+            //î•ñ‚ª‚È‚¢‚Æ‚«‚Í•”‰®î•ñ‚ğo—Í‚µ‚ÄI‚í‚é
+            if (value == null) { RoomMessageSet(); return; }
+
             _playerRoom = value;
             RoomMessageSet();
         }
@@ -28,6 +31,6 @@ public class Player : MonoBehaviour
 
     private void RoomMessageSet() 
     {
-        _tp.MessageSet = _playerRoom.text;
+        _tp.MessageTextSet = _playerRoom.texts;
     }
 }

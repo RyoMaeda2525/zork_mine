@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 973c1d4071750fe4b98479a4ffcb7845, type: 3}
   m_Name: WaterTankRoomSouth
   m_EditorClassIdentifier: 
-  name: StartRoomwall
-  texts: []
+  name: "\u58C1"
+  texts:
+  - "\u58C1\u3060"
   rooms:
   - {fileID: 0}
   - {fileID: 0}
