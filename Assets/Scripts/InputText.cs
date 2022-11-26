@@ -81,7 +81,7 @@ public class InputText : MonoBehaviour
                                     if (regex.IsMatch(_tp.MessageTextSet[j]))
                                     {
 
-                                        Debug.Log($"{regex}‚ðŽæ“¾‚µ‚½");
+                                        _tp.MessageTextSet = _player.PlayerRoom.roomItemList[i].getText;
                                         _inputField.text = "";
                                         return;
                                     }
@@ -130,11 +130,11 @@ public class InputText : MonoBehaviour
 
                                         if (regexDoor.IsMatch(_player.PlayerRoom.roomItemList[i].itemName))
                                         {
-                                            Debug.Log($"{_player.PlayerRoom.roomItemList[i].itemName}‚ðŠJ‚¯‚½"); 
+                                            RoomSet(_player.PlayerRoom.roomItemList[i].room);
                                         }
                                         else 
                                         {
-                                            Debug.Log($"{regex}‚ðŠJ‚¯‚½");
+                                            _tp.MessageTextSet = _player.PlayerRoom.roomItemList[i].openText;
                                         }
                                         _inputField.text = "";
                                         return;
