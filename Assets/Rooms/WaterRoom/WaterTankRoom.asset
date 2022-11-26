@@ -17,10 +17,10 @@ MonoBehaviour:
   - "\u90E8\u5C4B\u306E\u771F\u3093\u4E2D\u306B\u306F\u6C34\u69FD\u304C\u3042\u308A"
   - "\u5468\u308A\u306E\u58C1\u306B\u306F\u8D64\u3001\u9752\u3001\u7DD1\u306E\u6249\u304C\u3042\u308B\u3002"
   rooms:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: d46646cad98c90e498a23240b9bfbc1d, type: 2}
   - {fileID: 11400000, guid: db8b53fe05a75b34aa6918e097224cf5, type: 2}
   - {fileID: 11400000, guid: 95d2c0a396bd1ad449f86a5111d75c9c, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 2e9dc513cd118df428377c6918026dc6, type: 2}
   roomItemList:
   - itemName: "\u6C34\u69FD"
     collectItem: 0

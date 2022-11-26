@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 973c1d4071750fe4b98479a4ffcb7845, type: 3}
-  m_Name: loliRoomEast
+  m_Name: DollRoomWest
   m_EditorClassIdentifier: 
-  name: "\u7DD1\u306E\u6249"
+  name: "\u9752\u306E\u6249\u306E\u524D"
   texts:
-  - "\u7DD1\u306E\u6249\u306E\u524D\u307E\u3067\u6765\u307E\u3057\u305F"
+  - "\u9752\u306E\u6249\u306E\u524D\u307E\u3067\u6765\u307E\u3057\u305F"
   rooms:
+  - {fileID: 11400000, guid: 529bafdd47ac988408aefeed274e23a4, type: 2}
   - {fileID: 0}
-  - {fileID: 11400000, guid: b4e8ad1b979d06c4f967e73291accf7e, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   roomItemList:
-  - itemName: "\u7DD1\u306E\u6249"
+  - itemName: "\u9752\u306E\u6249"
     collectItem: 0
     informationText:
     - "\u6728\u3067\u3067\u304D\u3066\u3044\u308B\u666E\u901A\u306E\u6249\u306E\u3088\u3046\u3060"
