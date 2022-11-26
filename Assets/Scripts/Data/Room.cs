@@ -19,6 +19,8 @@ public class RoomItem
     public string[] getText;
     /// <summary>取った後に出る部屋のテキスト。</summary>
     public string[] notFaundText;
+    /// <summary>扉を開けた際に入る部屋</summary>
+    public Room room;
 }
 
 [CreateAssetMenu(fileName = "Room", menuName = "CreateRoom")]
