@@ -15,6 +15,7 @@ MonoBehaviour:
   name: "\u7DD1\u306E\u6249"
   texts:
   - "\u7DD1\u306E\u6249\u306E\u524D\u307E\u3067\u6765\u307E\u3057\u305F"
+  ItemNotSearchtexts: []
   rooms:
   - {fileID: 0}
   - {fileID: 11400000, guid: b4e8ad1b979d06c4f967e73291accf7e, type: 2}
@@ -22,7 +23,8 @@ MonoBehaviour:
   - {fileID: 0}
   roomItemList:
   - itemName: "\u7DD1\u306E\u6249"
-    collectItem: 0
+    collectItemBool: 0
+    deadBool: 0
     informationText:
     - "\u6728\u3067\u3067\u304D\u3066\u3044\u308B\u666E\u901A\u306E\u6249\u306E\u3088\u3046\u3060"
     openText:
@@ -30,4 +32,8 @@ MonoBehaviour:
     getText:
     - "\u53D6\u308A\u5916\u305D\u3046\u3068\u3057\u305F\u304C\u7121\u7406\u306A\u3088\u3046\u3060"
     notFaundText: []
+    DethText:
+    - "\u304C\u3001\u30AC\u30F3\u3068\u786C\u3044\u97F3\u3068\u5171\u306B\u306F\u3058\u304B\u308C\u3066\u3057\u307E\u3063\u305F\u3002"
+    DiedText:
+    - "\u3053\u308C\u4EE5\u4E0A\u306F\u7121\u610F\u5473\u3060\u308D\u3046\u3002"
     room: {fileID: 11400000, guid: f5f8377552e5d7a4ab4db6f849bd8569, type: 2}

@@ -21,3 +21,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   roomItemList: []
+  copyRoom: {fileID: 11400000, guid: e1632bdf5294e0e4eafa887d2263089d, type: 2}

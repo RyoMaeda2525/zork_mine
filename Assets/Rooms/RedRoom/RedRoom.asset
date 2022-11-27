@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: RedRoom
   m_EditorClassIdentifier: 
   name: "\u8D64\u306E\u90E8\u5C4B"
-  texts: []
+  texts:
+  - "\u673A\u3001\u30BF\u30F3\u30B9\u3001\u672C\u68DA\u304C\u898B\u3048\u308B"
+  ItemNotSearchtexts: []
   rooms:
   - {fileID: 11400000, guid: 7cdf91c831e087245aecd22563ab7315, type: 2}
   - {fileID: 11400000, guid: cd1cc8766d2f6384987f0833f69b3a1e, type: 2}

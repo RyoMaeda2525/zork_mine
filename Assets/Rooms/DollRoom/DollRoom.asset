@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: "\u9752\u306E\u90E8\u5C4B"
   texts:
-  - 
+  - "\u5317\u5074\u306E\u673A\u306E\u4E0A\u306B\u3042\u308B\u3044\u304F\u3064\u304B\u306E\u4EBA\u5F62\u304C\u76EE\u306B\u5165\u3063\u305F"
   rooms:
   - {fileID: 11400000, guid: 284988423a6c0c04a969cdadf78ae44d, type: 2}
   - {fileID: 11400000, guid: 72a6adf6149fe244091d3f21c571c19a, type: 2}
   - {fileID: 11400000, guid: 252aef6c7b5f7364ead4127ade985a22, type: 2}
-  - {fileID: 11400000, guid: 86d3ff4e8caa2004ea938159b52ddeef, type: 2}
+  - {fileID: 11400000, guid: 1b0e4c4771532104e8ffe57a7497b12e, type: 2}
   roomItemList: []
+  copyRoom: {fileID: 11400000, guid: 2b88b3a9ad8dd7a4f93bd86d28bb29c1, type: 2}
