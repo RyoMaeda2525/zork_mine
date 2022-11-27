@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 973c1d4071750fe4b98479a4ffcb7845, type: 3}
   m_Name: StartRoom
   m_EditorClassIdentifier: 
-  name: "\u30B9\u30BF\u30FC\u30C8\u5730\u70B9"
+  name: "\u30B9\u30BF\u30FC\u30C8\u90E8\u5C4B"
   texts:
   - "\u3044\u3064\u3082\u901A\u308A\u306E\u65E5\u5E38\u3092\u9001\u3063\u3066\u3044\u305F\u3042\u306A\u305F\u306F"
   - "\u6C17\u304C\u4ED8\u304F\u3068\u8584\u6697\u3044\u7A7A\u9593\u306B\u3044\u307E\u3057\u305F\u3002"
   - "\u90E8\u5C4B\u306E\u771F\u3093\u4E2D\u306B\u306F\u6C34\u69FD\u304C\u3042\u308A"
   - "\u5468\u308A\u306E\u58C1\u306B\u306F\u8D64\u3001\u9752\u3001\u7DD1\u306E\u6249\u304C\u3042\u308B\u3002"
   rooms:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: d46646cad98c90e498a23240b9bfbc1d, type: 2}
   - {fileID: 11400000, guid: db8b53fe05a75b34aa6918e097224cf5, type: 2}
   - {fileID: 11400000, guid: 95d2c0a396bd1ad449f86a5111d75c9c, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 2e9dc513cd118df428377c6918026dc6, type: 2}
   roomItemList: []
