@@ -1,10 +1,8 @@
 using System;
 using System.Collections;
 using TMPro;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.InputSystem.InputRemoting;
 
 public class TextPrinter : MonoBehaviour
 {
@@ -27,11 +25,32 @@ public class TextPrinter : MonoBehaviour
         }
     }
 
+    public void CenterRoomText(string[] messages) 
+    {
+        if (messages != null)
+        {
+            foreach (var message in messages)
+            {
+                _textUi.text += message;
+                _textUi.text += '\n';
+            }
+            StartCoroutine(ForceScrollDown());
+        }
+    }
+
     public void InputTextPrint(string inputText) 
     {
         _textUi.text += '\n';
         _textUi.text += ">" + inputText;
         _textUi.text += '\n';
+        StartCoroutine(ForceScrollDown());
+    }
+
+    public void TextPrint(string text) 
+    {
+        _textUi.text += text;
+        _textUi.text += '\n';
+
         StartCoroutine(ForceScrollDown());
     }
 
