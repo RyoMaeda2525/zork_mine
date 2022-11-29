@@ -307,7 +307,7 @@ public class InputText : MonoBehaviour
 
         for (int i = 0; i < _inventory._roomItems.Count; i++)
         {
-            Regex regex = new Regex("^" + _inventory._roomItems[i].itemName);
+            Regex regex = new Regex(_inventory._roomItems[i].itemName);
 
             if (regex.IsMatch(itemSearch))
             {
@@ -317,7 +317,7 @@ public class InputText : MonoBehaviour
 
         for (int i = 0; i < _player.PlayerRoom.roomItemList.Count; i++)
         {
-            Regex regex = new Regex("^" + _player.PlayerRoom.roomItemList[i].itemName);
+            Regex regex = new Regex(_player.PlayerRoom.roomItemList[i].itemName);
 
             if (regex.IsMatch(itemSearch))
             {

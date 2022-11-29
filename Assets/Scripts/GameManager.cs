@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         _gameClear = true;
 
-        if (Judge(_judgeItemName[0]))
+        if (!Judge(_judgeItemName[0]))
         {
             if (_deadItems.Count > 7)
             {
