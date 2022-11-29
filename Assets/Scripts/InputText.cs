@@ -202,9 +202,9 @@ public class InputText : MonoBehaviour
 
             if (item.lifeBool && item.deadBool)
             {
-                _tp.MessageTextSet = _player.PlayerRoom.roomItemList[i].DiedText;
+                _tp.MessageTextSet = item.DiedText;
             }
-            else { _tp.MessageTextSet = _player.PlayerRoom.roomItemList[i].informationText; }
+            else { _tp.MessageTextSet = item.informationText; }
             _inputField.text = "";
             return;
 
@@ -246,7 +246,7 @@ public class InputText : MonoBehaviour
 
             if (regex.IsMatch(_inputField.text))
             {
-                _tp.MessageTextSet = _player.PlayerRoom.roomItemList[i].openText;
+                _tp.MessageTextSet = _inventory._roomItems[i].openText;
                 _inputField.text = "";
                 return;
             }

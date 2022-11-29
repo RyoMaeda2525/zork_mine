@@ -163,8 +163,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 655219d2fdafa504b9714eda58a64986, type: 2}
-  m_sharedMaterial: {fileID: -546816443411086295, guid: 655219d2fdafa504b9714eda58a64986, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 810fe3dea1b6b36409c2a992ca0729af, type: 2}
+  m_sharedMaterial: {fileID: 3897199699523681974, guid: 810fe3dea1b6b36409c2a992ca0729af, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -398,7 +398,7 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_RichText: 1
-  m_GlobalFontAsset: {fileID: 11400000, guid: 655219d2fdafa504b9714eda58a64986, type: 2}
+  m_GlobalFontAsset: {fileID: 11400000, guid: 810fe3dea1b6b36409c2a992ca0729af, type: 2}
   m_OnFocusSelectAll: 1
   m_ResetOnDeActivation: 1
   m_RestoreOriginalTextOnEscape: 1
@@ -858,8 +858,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 655219d2fdafa504b9714eda58a64986, type: 2}
-  m_sharedMaterial: {fileID: -546816443411086295, guid: 655219d2fdafa504b9714eda58a64986, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 810fe3dea1b6b36409c2a992ca0729af, type: 2}
+  m_sharedMaterial: {fileID: 3897199699523681974, guid: 810fe3dea1b6b36409c2a992ca0729af, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1365,8 +1365,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Enter text...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 655219d2fdafa504b9714eda58a64986, type: 2}
-  m_sharedMaterial: {fileID: -546816443411086295, guid: 655219d2fdafa504b9714eda58a64986, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 810fe3dea1b6b36409c2a992ca0729af, type: 2}
+  m_sharedMaterial: {fileID: 3897199699523681974, guid: 810fe3dea1b6b36409c2a992ca0729af, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1561,6 +1561,7 @@ MonoBehaviour:
   _tp: {fileID: 1800632653}
   _judgeRoom: {fileID: 11400000, guid: 1b0e4c4771532104e8ffe57a7497b12e, type: 2}
   _judgeItemName:
+  - "\u5C11\u5973"
   - "\u9AD8\u8CB4\u306A\u670D\u306E\u7537"
   - "\u9AD8\u8CB4\u306A\u670D\u306E\u5973"
 --- !u!114 &1800632658
