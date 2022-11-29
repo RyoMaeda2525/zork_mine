@@ -1559,9 +1559,9 @@ MonoBehaviour:
   _gameClear: 0
   _roomManager: {fileID: 1800632658}
   _tp: {fileID: 1800632653}
+  _inventory: {fileID: 1800632659}
   _judgeRoom: {fileID: 11400000, guid: 1b0e4c4771532104e8ffe57a7497b12e, type: 2}
   _judgeItemName:
-  - "\u5C11\u5973"
   - "\u9AD8\u8CB4\u306A\u670D\u306E\u7537"
   - "\u9AD8\u8CB4\u306A\u670D\u306E\u5973"
 --- !u!114 &1800632658

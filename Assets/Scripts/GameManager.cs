@@ -11,9 +11,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private TextPrinter _tp;
 
-    [SerializeField, Tooltip("ゲームクリアの判定な部屋情報")]
-    private Room _judgeRoom;
-
     [SerializeField, Tooltip("ゲームクリアの判定なアイテム情報")]
     private string[] _judgeItemName;
 
@@ -23,7 +20,7 @@ public class GameManager : MonoBehaviour
     {
         _gameClear = true;
 
-        if (!Judge(_judgeItemName[0]))
+        if (ItemJudge(_judgeItemName[0]))
         {
             if (_deadItems.Count > 7)
             {
@@ -40,7 +37,7 @@ public class GameManager : MonoBehaviour
         }
         else //badEnd確定
         {
-            if (Judge(_judgeItemName[1]) && Judge(_judgeItemName[2]))
+            if (ItemJudge(_judgeItemName[1]) && ItemJudge(_judgeItemName[2]))
             {
                 _tp.TextPrint("水槽に入れると、少女は嬉しそうにする");
                 _tp.TextPrint("しかし、そのほほ笑みは次第に狂気に染まり");
@@ -71,16 +68,12 @@ public class GameManager : MonoBehaviour
         _roomManager.RoomReset();
     }
 
-    private bool Judge(string itemName)
+    private bool ItemJudge(string itemName)
     {
-        if (_judgeRoom != null)
+        for (int i = 0; i < _deadItems.Count; i++)
         {
-            for (int i = 0; i < _judgeRoom.roomItemList.Count; i++)
-            {
-                if (_judgeRoom.roomItemList[i].itemName == itemName)
-                { return true; }
-            }
-            return false;
+            if (_deadItems[i].itemName == itemName)
+            { return true; }
         }
         return false;
     }
