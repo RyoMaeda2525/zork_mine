@@ -125,11 +125,13 @@ public class InputText : MonoBehaviour
     {
         for (int i = 0; i < _player.PlayerRoom.roomItemList.Count; i++)
         {
-            Regex regex = new Regex(_player.PlayerRoom.roomItemList[i].itemName);
+            Regex regex = new Regex("^" + _player.PlayerRoom.roomItemList[i].itemName);
+
+            Regex textRegex = new Regex(_player.PlayerRoom.roomItemList[i].itemName);
 
             if (regex.IsMatch(_inputField.text))
             {
-                if (TextIsMatch(_tp.MessageTextSet, regex) || TextIsMatch(_player.PlayerRoom.texts, regex))
+                if (TextIsMatch(_tp.MessageTextSet, textRegex) || TextIsMatch(_player.PlayerRoom.texts, textRegex))
                 {
                     if (_inventory.ItemSearch(_player.PlayerRoom.roomItemList[i]))
                     {
@@ -177,11 +179,13 @@ public class InputText : MonoBehaviour
         {
             RoomItem item = _player.PlayerRoom.roomItemList[i];
 
-            Regex regex = new Regex(item.itemName);
+            Regex regex = new Regex("^" + item.itemName);
+
+            Regex textRegex = new Regex(item.itemName);
 
             if (regex.IsMatch(_inputField.text))
             {
-                if (TextIsMatch(_tp.MessageTextSet, regex) || TextIsMatch(_player.PlayerRoom.texts, regex))
+                if (TextIsMatch(_tp.MessageTextSet, textRegex) || TextIsMatch(_player.PlayerRoom.texts, textRegex))
                 {
                     if (item.lifeBool && item.deadBool)
                     {
@@ -198,15 +202,19 @@ public class InputText : MonoBehaviour
         {
             RoomItem item = _inventory._roomItems[i];
 
-            Regex regex = new Regex(item.itemName);
+            Regex regex = new Regex("^" + item.itemName);
 
-            if (item.lifeBool && item.deadBool)
+            if (regex.IsMatch(_inputField.text))
             {
-                _tp.MessageTextSet = item.DiedText;
+
+                if (item.lifeBool && item.deadBool)
+                {
+                    _tp.MessageTextSet = item.DiedText;
+                }
+                else { _tp.MessageTextSet = item.informationText; }
+                _inputField.text = "";
+                return;
             }
-            else { _tp.MessageTextSet = item.informationText; }
-            _inputField.text = "";
-            return;
 
         }
         _inputField.text = "";
@@ -217,11 +225,13 @@ public class InputText : MonoBehaviour
     {
         for (int i = 0; i < _player.PlayerRoom.roomItemList.Count; i++)
         {
-            Regex regex = new Regex(_player.PlayerRoom.roomItemList[i].itemName);
+            Regex regex = new Regex("^" + _player.PlayerRoom.roomItemList[i].itemName);
+
+            Regex textRegex = new Regex(_player.PlayerRoom.roomItemList[i].itemName);
 
             if (regex.IsMatch(_inputField.text))
             {
-                if (TextIsMatch(_tp.MessageTextSet, regex) || TextIsMatch(_player.PlayerRoom.texts, regex))
+                if (TextIsMatch(_tp.MessageTextSet, textRegex) || TextIsMatch(_player.PlayerRoom.texts, textRegex))
                 {
                     Regex regexDoor = new Regex("”à");
 
@@ -242,7 +252,7 @@ public class InputText : MonoBehaviour
 
         for (int i = 0; i < _inventory._roomItems.Count; i++)
         {
-            Regex regex = new Regex(_inventory._roomItems[i].itemName);
+            Regex regex = new Regex("^" + _inventory._roomItems[i].itemName);
 
             if (regex.IsMatch(_inputField.text))
             {
@@ -297,7 +307,7 @@ public class InputText : MonoBehaviour
 
         for (int i = 0; i < _inventory._roomItems.Count; i++)
         {
-            Regex regex = new Regex(_inventory._roomItems[i].itemName);
+            Regex regex = new Regex("^" + _inventory._roomItems[i].itemName);
 
             if (regex.IsMatch(itemSearch))
             {
@@ -307,7 +317,7 @@ public class InputText : MonoBehaviour
 
         for (int i = 0; i < _player.PlayerRoom.roomItemList.Count; i++)
         {
-            Regex regex = new Regex(_player.PlayerRoom.roomItemList[i].itemName);
+            Regex regex = new Regex("^" + _player.PlayerRoom.roomItemList[i].itemName);
 
             if (regex.IsMatch(itemSearch))
             {
